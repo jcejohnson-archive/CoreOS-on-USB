@@ -1,0 +1,23 @@
+Launch VirtualBox as Administrator
+
+Create a VM with:
+- 2G RAM
+- No HDD
+
+Insert the USB disk
+
+Read: http://www.howtogeek.com/187721/how-to-boot-from-a-usb-drive-in-virtualbox/
+
+WindowsKey+R diskmgmt.msc
+  Identify the USB drive number
+  I will use "2" in this document
+
+Launch a Command Prompt as Adminstrator
+
+cd to the new VM directory
+
+>"\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands createrawvmdk -filename SanDisk-16G-USB.vmdk -rawdisk \\.\PhysicalDrive2
+
+In the VB interfact, attach the new virtual drive SanDisk-16G-USB.vmdk
+
+Boot

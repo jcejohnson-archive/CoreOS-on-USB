@@ -1,0 +1,14 @@
+Launch VirtualBox as Administrator
+
+Insert the USB disk
+
+Create a VM with:
+- 2G RAM
+- No HDD
+- USB 3.0 Controller (Requires VB 5.0.1 or later)
+- USB Device Filter for SanDisk Ultra Fit
+
+Mount the CoreOS installation CD
+Boot
+scp root@core1:cloud-config.yml .
+sudo coreos-install -d /dev/sda -C stable -c cloud-config.yml
